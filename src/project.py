@@ -165,6 +165,8 @@ class Game:
             
         if not (161 <= self.snake.x[0] <= 840 and  101 <= self.snake.y[0] <= 720):
             self.play_sound('crash')
+            sound = pygame.mixer.Sound("crash.mp3")
+            pygame.mixer.Sound.play(sound)
             raise "Hit the boundry error"
         
         
