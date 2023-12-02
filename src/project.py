@@ -150,7 +150,7 @@ class Game:
         pygame.display.flip()
 
         for i in range(self.snake.length):
-            if self.is_collision(self.snake.x[i], self.snake.y[0], self.apple.x, self.apple.y):
+            if self.is_collision(self.snake.x[0], self.snake.y[i], self.apple.x, self.apple.y):
                 sound = pygame.mixer.Sound("Crunch.mp3")
                 pygame.mixer.Sound.play(sound)
                 self.snake.increase_length()
